@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Chat~!</title>
+ <script src = "http://code.jquery.com/jquery-1.7.1.js"></script>
+ <script src = "/socket.io/socket.io.js"></script>
+ <script>
+  $(document).ready(function() {
+   var socket = io.connect();
+   
+   socket.on('message', function (data) {
+    
+    var count = parseInt($('#message'+data.message).val())+ 1;
+    $('#message'+data.message).val(count);
+    
+   });
+   
+   // 버튼 클릭 시 
+   $('#b1').click(function () {
+    socket.emit('message', { message: 1 });
+   });
+   
+   $('#b2').click(function () {
+    socket.emit('message', { message: 2 });
+   });
+   
+   $('#b3').click(function () {
+    socket.emit('message', { message: 3 });
+   });
+   
+   
+  });
+ </script>
+ 
+ </head>
+ 
+ <body>
+  <input id = "message1" value = "0"/>
+  <input id = "message2" value = "0"/>
+  <input id = "message3" value = "0"/>
+  <button id="b1">1</button>
+  <button id="b2">2</button>
+  <button id="b3">3</button>
+  
+ </body>
+</html>
