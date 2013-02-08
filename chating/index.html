@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>Chat~!</title>
+ <script src = "http://code.jquery.com/jquery-1.7.1.js"></script>
+ <script src = "/socket.io/socket.io.js"></script>
+ <script>
+  $(document).ready(function() {
+   var socket = io.connect();
+   
+   socket.on('message', function (data) {
+   
+    var output = '';
+    output += '<li>';
+    output += '<p>'+ data.message +'</p>';
+    output += '</li>';
+    
+    $(output).prependTo('#content');
+   });
+   
+   // 버튼 클릭 시 
+   $('button').click(function () {
+    socket.emit('message', { message: $('#message').val() });
+   });
+  });
+ </script>
+ 
+ </head>
+ 
+ <body>
+  <input id = "message" />
+  <button>Send</button>
+  
+  <ul id = "content">
+  </ul>
+  
+ </body>
+</html>

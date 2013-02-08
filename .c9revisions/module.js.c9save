@@ -1,0 +1,4 @@
+{"ts":1360222173941,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1360222193139,"patch":[[{"diffs":[[1,"exports.hello = function() {\r\n console.log('hello world');\r\n};\r\n"]],"start1":0,"start2":0,"length1":0,"length2":64}]],"length":64,"saved":false}
+{"ts":1360222207568,"patch":[[{"diffs":[[0," {\r\n"],[-1," console.log('hello world');"],[1,"\r\n\r\n"],[0,"\r\n};"]],"start1":26,"start2":26,"length1":36,"length2":12}]],"length":40,"saved":false}
+{"ts":1360222212003,"patch":[[{"diffs":[[0," {\r\n\r\n\r\n"],[1,"var http = require('http');\r\nhttp.createServer(function (req, res) {\r\n  res.writeHead(200, {'Content-Type': 'text/plain'});\r\n  res.end('Hello World\\n');\r\n}).listen(process.env.PORT, process.env.IP);\r\nconsole.log('Server running at Cloud9');\r\n\r\n\r\n"],[0,"\r\n};\r\n"]],"start1":26,"start2":26,"length1":14,"length2":260}]],"length":286,"saved":false}

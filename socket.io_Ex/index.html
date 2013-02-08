@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script src = "/socket.io/socket.io.js"></script>
+  <script>
+   window.onload = function() {
+    // 소켓 생성
+    var socket = io.connect();
+    
+    // 소켓 이벤트 연결 
+    socket.on('Event2', function (data) {
+     alert(data);
+    });
+    
+    // Send 연결 
+    document.getElementById('button').onclick = function() {
+    
+     // 전송 
+     var text = document.getElementById('text').value;
+     socket.emit('Event1', text);
+    };
+   };
+  </script>
+ </head>
+ <body>
+  <input type = "text" id = "text" />
+  <input type = "button" id = "button" value = "send" />
+ </body>
+</html>
