@@ -1,0 +1,2 @@
+{"ts":1360743416783,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1360743468538,"patch":[[{"diffs":[[1,"// note that we extend a different\r\n// layout with jade for 4xx & 5xx\r\n// responses\r\n\r\nextends error\r\n\r\nblock content\r\n  h1 Error: #{error.message}\r\n  if settings['verbose errors']\r\n    pre= error.stack\r\n  else\r\n    p An error ocurred!"]],"start1":0,"start2":0,"length1":0,"length2":235}]],"length":235,"saved":false}

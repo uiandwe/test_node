@@ -1,0 +1,2 @@
+{"ts":1360743450007,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1360743501469,"patch":[[{"diffs":[[1,"extends layout\r\n\r\nblock content\r\n  h2 Pages Example\r\n  ul\r\n    li \r\n      | visit \r\n      a(href=\"/500\") 500\r\n    li\r\n      | visit \r\n      a(href=\"/404\") 404\r\n    li\r\n      | visit \r\n      a(href='/403') 403"]],"start1":0,"start2":0,"length1":0,"length2":208}]],"length":208,"saved":false}
