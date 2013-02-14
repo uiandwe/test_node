@@ -1,0 +1,12 @@
+{"ts":1360803958756,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1360803978219,"patch":[[{"diffs":[[1,"extends layout\r\n\r\nblock content\r\n  ul\r\n    li Visit the <a href=\"/users\">users</a> page\r\n    li Visit the <a href=\"/posts\">posts</a> page"]],"start1":0,"start2":0,"length1":0,"length2":137}]],"length":137,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1360806964911,"patch":[[{"diffs":[[0,"\">posts</a> page"],[1,"\r\n\r\n    div#container test"]],"start1":121,"start2":121,"length1":16,"length2":42}]],"length":163,"saved":false}
+{"ts":1360807473542,"patch":[[{"diffs":[[0,"page\r\n\r\n"],[-1,"    "],[0,"div#cont"]],"start1":133,"start2":133,"length1":20,"length2":16}]],"length":159,"saved":false}
+{"ts":1360807493530,"patch":[[{"diffs":[[0,"page\r\n\r\n"],[1,"  "],[0,"div#cont"]],"start1":133,"start2":133,"length1":16,"length2":18}]],"length":161,"saved":false}
+{"ts":1360807855029,"patch":[[{"diffs":[[0,"ner "],[-1,"test"],[1,"테스트\r\n"]],"start1":153,"start2":153,"length1":8,"length2":9}]],"length":162,"saved":false}
+{"ts":1360807955027,"patch":[[{"diffs":[[0,"ner "],[1,"id "],[0,"테스트\r\n"],[1,"   div.user-details class 테스트"]],"start1":153,"start2":153,"length1":9,"length2":41}]],"length":194,"saved":false}
+{"ts":1360808085725,"patch":[[{"diffs":[[0,"ls class 테스트"],[1,"\r\n  #foo\r\n    .bar\r\n"]],"start1":182,"start2":182,"length1":12,"length2":32}]],"length":214,"saved":false}
+{"ts":1360808114635,"patch":[[{"diffs":[[0,"  #foo\r\n"],[-1,"  "],[0,"  .bar\r\n"]],"start1":196,"start2":196,"length1":18,"length2":16}]],"length":212,"saved":false}
+{"ts":1360808133681,"patch":[[{"diffs":[[0,"#foo"],[1," foo"],[0,"\r\n  .bar"],[1," bar"],[0,"\r\n"]],"start1":198,"start2":198,"length1":14,"length2":22}]],"length":220,"saved":false}
+{"ts":1360808225082,"patch":[[{"diffs":[[0,"\r\n  "],[-1,"div#container id 테스트\r\n   div.user-details class 테스트\r\n  #foo f"],[1,"p\r\n  | foo bar baz\r\n  | rawr rawr\r\n  | super c"],[0,"oo"],[1,"l"],[0,"\r\n  "],[-1,".bar bar\r\n"],[1,"| go jade go"]],"start1":139,"start2":139,"length1":81,"length2":69}]],"length":208,"saved":false}
+{"ts":1360808256054,"patch":[[{"diffs":[[0," bar baz"],[1," "],[0,"\r\n  | ra"]],"start1":153,"start2":153,"length1":16,"length2":17}]],"length":209,"saved":false}

@@ -1,0 +1,5 @@
+{"ts":1360803875223,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1360803893649,"patch":[[{"diffs":[[1,"// Fake posts database\r\n\r\nvar posts = [\r\n  { title: 'Foo', body: 'some foo bar' },\r\n  { title: 'Foo bar', body: 'more foo bar' },\r\n  { title: 'Foo bar baz', body: 'more foo bar baz' }\r\n];\r\n\r\nexports.list = function(req, res){\r\n  res.render('posts', { title: 'Posts', posts: posts });\r\n};"]],"start1":0,"start2":0,"length1":0,"length2":287}]],"length":287,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1360806075858,"patch":[[{"diffs":[[0,"r('posts"],[1,"1"],[0,"', { tit"]],"start1":238,"start2":238,"length1":16,"length2":17},{"diffs":[[0,": 'Posts"],[1,"2"],[0,"', posts"]],"start1":257,"start2":257,"length1":16,"length2":17}]],"length":289,"saved":false}
+{"ts":1360806103845,"patch":[[{"diffs":[[0,"osts"],[-1,"1"],[0,"', {"]],"start1":242,"start2":242,"length1":9,"length2":8}]],"length":288,"saved":false}
+{"ts":1360806173106,"patch":[[{"diffs":[[0,"osts"],[-1,"2"],[0,"', p"]],"start1":260,"start2":260,"length1":9,"length2":8}]],"length":287,"saved":false}
