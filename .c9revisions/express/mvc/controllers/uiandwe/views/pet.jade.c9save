@@ -1,0 +1,7 @@
+{"ts":1360840106145,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1360840154083,"patch":[[{"diffs":[[1,".pet\n    li= pet.name"]],"start1":0,"start2":0,"length1":0,"length2":21}]],"length":21,"saved":false}
+{"ts":1360840155413,"patch":[[{"diffs":[[1," "],[0,".pet\n   "]],"start1":0,"start2":0,"length1":8,"length2":9}]],"length":22,"saved":false}
+{"ts":1360840283789,"patch":[[{"diffs":[[1," \n"],[0," .pet\n  "]],"start1":0,"start2":0,"length1":8,"length2":10}]],"length":24,"saved":false}
+{"ts":1360840292871,"patch":[[{"diffs":[[0," \n"],[-1," "],[0,".pet\n   "]],"start1":0,"start2":0,"length1":11,"length2":10}]],"length":23,"saved":false}
+{"ts":1360840302839,"patch":[[{"diffs":[[0," \n"],[1," "],[0,".pet\n   "]],"start1":0,"start2":0,"length1":10,"length2":11}]],"length":24,"saved":false}
+{"ts":1360840313187,"patch":[[{"diffs":[[0," \n"],[-1," "],[0,".pet\n   "]],"start1":0,"start2":0,"length1":11,"length2":10}]],"length":23,"saved":false}

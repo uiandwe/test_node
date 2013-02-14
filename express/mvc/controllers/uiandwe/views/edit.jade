@@ -1,0 +1,7 @@
+link(rel='stylesheet', href='/style.css')
+h1= uiandwe.name
+form(action='/uiandwe/#{uiandwe.id}', method='post')
+  input(type='hidden', name='_method', value='put')
+  label Name: 
+    input(type='text', name='user[name]', value=uiandwe.name)
+  input(type='submit', value='Update')

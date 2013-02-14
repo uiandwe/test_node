@@ -1,0 +1,24 @@
+{"ts":1360832224007,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1360832296439,"patch":[[{"diffs":[[1,"#foo\n    fuck "]],"start1":0,"start2":0,"length1":0,"length2":14}]],"length":14,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1360833893044,"patch":[[{"diffs":[[1,"link(rel='stylesheet', href='/style.css')\nh1 test\n"],[0,"#foo\n   "]],"start1":0,"start2":0,"length1":8,"length2":58}]],"length":64,"saved":false}
+{"ts":1360833919961,"patch":[[{"diffs":[[0,"est\n"],[1,"\n "],[0,"#foo"],[-1,"\n  "],[0,"  fu"]],"start1":46,"start2":46,"length1":15,"length2":14}]],"length":63,"saved":false}
+{"ts":1360833935789,"patch":[[{"diffs":[[0,"oo  "],[-1,"fuck "],[1,"!!!!"]],"start1":54,"start2":54,"length1":9,"length2":8}]],"length":62,"saved":false}
+{"ts":1360834469582,"patch":[[{"diffs":[[0,"oo  !!!!"],[1,"\n     for user in users \n        li user.name"]],"start1":54,"start2":54,"length1":8,"length2":53}]],"length":107,"saved":false}
+{"ts":1360834539112,"patch":[[{"diffs":[[0,"      li"],[1,"="],[0," user.na"]],"start1":89,"start2":89,"length1":16,"length2":17}]],"length":108,"saved":false}
+{"ts":1360834866429,"patch":[[{"diffs":[[0,"user in "],[1,"db."],[0,"users \n "]],"start1":72,"start2":72,"length1":16,"length2":19}]],"length":111,"saved":false}
+{"ts":1360834885554,"patch":[[{"diffs":[[0," in "],[-1,"db."],[0,"users"],[-1," "],[0,"\n   "]],"start1":76,"start2":76,"length1":17,"length2":13}]],"length":107,"saved":false}
+{"ts":1360834886589,"patch":[[{"diffs":[[0," in user"],[-1,"s"],[0,"\n       "]],"start1":76,"start2":76,"length1":17,"length2":16}]],"length":106,"saved":false}
+{"ts":1360838400936,"patch":[[{"diffs":[[0,"    "],[-1,"for user in user\n        li= user.name"],[1,"=users[0]\n     "]],"start1":64,"start2":64,"length1":42,"length2":19}]],"length":83,"saved":false}
+{"ts":1360838442162,"patch":[[{"diffs":[[0,"!!\n     "],[1,"<%"],[0,"=users[0"]],"start1":60,"start2":60,"length1":16,"length2":18},{"diffs":[[0,"users[0]"],[1,".name%>"],[0,"\n     "]],"start1":71,"start2":71,"length1":14,"length2":21}]],"length":92,"saved":false}
+{"ts":1360838501978,"patch":[[{"diffs":[[0,"    "],[-1,"<%"],[1,"h2"],[0,"=use"]],"start1":64,"start2":64,"length1":10,"length2":10},{"diffs":[[0,"name"],[-1,"%>"],[0,"\n   "]],"start1":80,"start2":80,"length1":10,"length2":8}]],"length":90,"saved":false}
+{"ts":1360838719607,"patch":[[{"diffs":[[0,"    "],[-1," h2=users[0].name"],[0,"\n   "]],"start1":63,"start2":63,"length1":25,"length2":8}]],"length":73,"saved":false}
+{"ts":1360838943973,"patch":[[{"diffs":[[0,"!!!\n    "],[1,"h2=user.name"],[0,"\n     "]],"start1":59,"start2":59,"length1":14,"length2":26}]],"length":85,"saved":false}
+{"ts":1360838959696,"patch":[[{"diffs":[[0," h2=user"],[1,"s"],[0,".name\n  "]],"start1":66,"start2":66,"length1":16,"length2":17}]],"length":86,"saved":false}
+{"ts":1360838998537,"patch":[[{"diffs":[[0,"h2=users"],[1,"[0]"],[0,".name\n  "]],"start1":67,"start2":67,"length1":16,"length2":19}]],"length":89,"saved":false}
+{"ts":1360839149986,"patch":[[{"diffs":[[0,"!!!\n"],[1,"    for user in users\n "],[0,"    h2="],[1," "],[0,"user"],[-1,"s[0]"],[0,".nam"]],"start1":59,"start2":59,"length1":23,"length2":43}]],"length":109,"saved":false}
+{"ts":1360839229732,"patch":[[{"diffs":[[0,"r.name\n     "],[1,"for pet in user.pets\n         li= pet.name\n     "]],"start1":97,"start2":97,"length1":12,"length2":60}]],"length":157,"saved":false}
+{"ts":1360839295010,"patch":[[{"diffs":[[0,"= user.name\n"],[1,"         ul\n    "],[0,"     for pet"]],"start1":92,"start2":92,"length1":24,"length2":40},{"diffs":[[0,"er.pets\n"],[1,"    "],[0,"        "]],"start1":138,"start2":138,"length1":16,"length2":20}]],"length":177,"saved":false}
+{"ts":1360839345392,"patch":[[{"diffs":[[0,"2= user.name"],[-1,"\n"],[0,"         ul\n"]],"start1":91,"start2":91,"length1":25,"length2":24},{"diffs":[[0,"    "],[-1,"ul"],[0,"\n   "]],"start1":108,"start2":108,"length1":10,"length2":8}]],"length":174,"saved":false}
+{"ts":1360840017646,"patch":[[{"diffs":[[0,"    "],[-1," h2= user.name         \n         for pet in user.pets\n             li= pet.name"],[1,"include user\n    "],[0,"\n   "]],"start1":85,"start2":85,"length1":87,"length2":25}]],"length":112,"saved":false}
+{"ts":1360840087361,"patch":[[{"diffs":[[0,"ers\n    "],[1," "],[0,"include "]],"start1":81,"start2":81,"length1":16,"length2":17}]],"length":113,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1360844800970,"patch":[[{"diffs":[[0," href='/"],[-1,"style"],[1,"layout"],[0,".css')\nh"]],"start1":22,"start2":22,"length1":21,"length2":22}]],"length":114,"saved":false}

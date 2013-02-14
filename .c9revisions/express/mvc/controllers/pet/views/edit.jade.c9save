@@ -1,0 +1,2 @@
+{"ts":1360826250742,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1360826305225,"patch":[[{"diffs":[[1,"link(rel='stylesheet', href='/style.css')\r\nh1= pet.name\r\nform(action='/pet/#{pet.id}', method='post')\r\n  input(type='hidden', name='_method', value='put')\r\n  label Name: \r\n    input(type='text', name='user[name]', value=pet.name)\r\n  input(type='submit', value='Update')"]],"start1":0,"start2":0,"length1":0,"length2":269}]],"length":269,"saved":false}
