@@ -1,0 +1,6 @@
+{"ts":1360820844604,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1360820890460,"patch":[[{"diffs":[[1,"head\r\n  title Jade Example\r\n  link(rel=\"stylesheet\", href=\"/stylesheets/style.css\")"]],"start1":0,"start2":0,"length1":0,"length2":83}]],"length":83,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1360821352553,"patch":[[{"diffs":[[0,"\", href="],[1,"__dirname+"],[0,"\"/styles"]],"start1":50,"start2":50,"length1":16,"length2":26}]],"length":93,"saved":false}
+{"ts":1360821526595,"patch":[[{"diffs":[[0,"ref="],[-1,"__dirname+\"/stylesheets"],[1,"\""],[0,"/sty"]],"start1":54,"start2":54,"length1":31,"length2":9}]],"length":71,"saved":false}
+{"ts":1360821628580,"patch":[[{"diffs":[[0,"ink("],[1,"h"],[0,"re"],[-1,"l"],[1,"f"],[0,"=\""],[1,"/"],[0,"style"],[-1,"sheet"],[1,".css"],[0,"\", "],[-1,"h"],[0,"re"],[-1,"f"],[1,"l"],[0,"=\""],[-1,"/"],[0,"style"],[-1,".css"],[1,"sheet"],[0,"\")"]],"start1":31,"start2":31,"length1":40,"length2":40}]],"length":71,"saved":false}
+{"ts":1360821952201,"patch":[[{"diffs":[[0,"(href=\"/"],[1,"stylesheets/"],[0,"style.cs"]],"start1":34,"start2":34,"length1":16,"length2":28}]],"length":83,"saved":false}
