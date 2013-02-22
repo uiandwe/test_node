@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>test</title>
+ <script src = "http://code.jquery.com/jquery-1.7.1.js"></script>
+ <script src = "/socket.io/socket.io.js"></script>
+
+
+<script>
+  $(document).ready(function() {
+   var socket = io.connect();
+   
+   socket.on('message', function (data) {
+    
+    var count = parseInt($('#twitterCount').val())+data;
+    $('#twitterCount').val(count);
+    
+   });
+   
+   
+   $('#b3').click(function () {
+    socket.emit('message', { message: 3 });
+   });
+   
+   
+  });
+
+ </script>
+
+<div>
+  <input id='twitterCount' value='0'/>
+   <button id="b3">3</button>
+</div>
+
+ </body>
+</html>

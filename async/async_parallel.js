@@ -13,7 +13,7 @@ async.parallel([
       // 다음 task으로 이동하기 위해 callback 실행
       // one값 전달
       callback(null, 'one');   
-    }, 200);
+    }, 2000);
   },
 
   function(callback) {          

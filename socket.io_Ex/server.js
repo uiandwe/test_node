@@ -16,7 +16,6 @@ var io = socketio.listen(server);
  
 // 클라이언트 접속 처리 
 io.sockets.on('connection', function (socket) {
- 
  // 클라이언트가 보낸 Send 이벤트 처리 
  socket.on('Event1', function(data) {
   console.log('Client Send Data:', data);

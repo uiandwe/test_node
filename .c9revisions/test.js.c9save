@@ -1,0 +1,3 @@
+{"ts":1361513867846,"silentsave":true,"restoring":false,"patch":[[]],"length":0}
+{"contributors":[],"silentsave":false,"ts":1361513882522,"patch":[[{"diffs":[[1,"cnt=0;\r\n\r\nfunction a(){\r\n\r\n  if(cnt<10){\r\n    cnt++;\r\n    alert(cnt);\r\n  } else\r\n    clearInterval(tid);\r\n }\r\n\r\ntid=setInterval(a,1000);"]],"start1":0,"start2":0,"length1":0,"length2":136}]],"length":136,"saved":false}
+{"ts":1361513895022,"patch":[[{"diffs":[[0,"    "],[-1,"alert"],[1,"console.log"],[0,"(cnt"]],"start1":54,"start2":54,"length1":13,"length2":19}]],"length":142,"saved":false}
