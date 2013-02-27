@@ -1,54 +1,78 @@
-var config = require('./config').config,
-    OAuth = require('oauth').OAuth,
-	read = require('read');
+var request = require('request')
+    , JSONStream = require('JSONStream')
+    , es = require('event-stream')
+    , async = require('async')
+    , cluster = require('cluster')
+    , numCPUs = require('os').cpus().length
+    , socketio = require('socket.io')
+    , express = require('express');
 
-// Service Provider와 통신할 인터페이스를 갖고 있는 객체 생성.
-var oauth = new OAuth(config.requestTokenUrl, config.accessTokenUrl,
-	config.consumerKey, config.consumerSecret,
-	"1.0", config.callbackUrl, "HMAC-SHA1");
+if (cluster.isMaster) {
+    // Fork workers.
+    for (var i = 0; i < numCPUs; i++) {
+        cluster.fork();
+    }
+ 
+    cluster.on('death', function(worker) {
+        console.log('worker ' + worker.pid + ' died');
+    });
+} else {
+    console.log("worker: %s", process.env.NODE_WORKER_ID);
+ 
+    var app = express();
+    var server = require('http').createServer(app);
+    var io = socketio.listen(server);
+    
+    app.get('/', function(req, res){
+        console.log("WORKED!! %s", process.env.NODE_WORKER_ID);
+        res.sendfile(__dirname+'/index.html');
+    });
+ 
+   
+    console.log('Server Running~!');
 
-// 2. Request Token 요청
-oauth.getOAuthRequestToken(function(err, requestToken, requestTokenSecret, results) {
-	if (err) {
-		console.log(err);
-	} else {
+        
+    function thread() { 
+        var result  = Array();
+            
+        var parser = JSONStream.parse(['results', true])
+                     .on('error', function(err) { console.log(err); })
+          , req = request({url: 'http://search.twitter.com/search.json?geocode=37.335887,126.584063,50km'})
+          , logger = es.mapSync(function (data) {
+                //console.log(data.iso_language_code);
+                result.push(data.text);
+                
+        }).on('error', function(err) { console.log(err); });
+        
+        
+        async.parallel([
+          function(callback) {
+            setTimeout(function() {
+              req.pipe(parser).pipe(logger);
+              callback(null, 'one');   
+            }, 10);
+          },
+        
+           
+          function(callback) {          
+            setTimeout(function(){
+              callback(null, 'three');
+            }, 1000);
+          },
+        ],
+        
+        function(err, results) {
+            console.log('twitter count : '+result.length);
+            //console.log('twitter count : '+result[1]);
+            //io.sockets.on('connection', function (socket) {
+             //   console.log("return : " + result.length);
+             // io.sockets.emit('message', 1); 
+           // });
+        });
+    }
+    
+    var tid = setInterval( thread,  10000);
+    
+    server.listen(process.env.PORT);
+}
 
-		// 3. 사용자 인증(Authentication) 및 권한 위임(Authorization)
-		console.log(config.authorizeUrl + "?oauth_token=" + requestToken);
-		console.log("웹브라우저에서 위 URL로 가서 인증코드를 얻고 입력하세요.");
-
-		// 4. verifier 입력 받기
-		read({prompt: "verifier: "}, function(err, verifier) {
-			if(err) {
-				console.log(err);
-			} else {
-
-				// 5. Request Token을 AccessToken 으로 교환
-				oauth.getOAuthAccessToken(requestToken, requestTokenSecret, verifier, function(err, accessToken, accessTokenSecret, result) {
-					if (err) {
-						console.log(err);
-					} else {
-	
-						console.log("Access Token = " + accessToken);
-						console.log("Access Token Secret = " + accessTokenSecret);
-						/*
-						// 6. 보호된 자원에 접근
-						var resourceUrl = config.apiUrl + "/calendar/category/index.json";
-						oauth.get(resourceUrl, accessToken, accessTokenSecret, function(err, data, res) {
-							if(err) {
-								console.log(err);
-							} else {
-								categories = eval(data);
-
-								for(var i = 0; i < categories.length; i++) {
-									console.log(categories[i].name);
-								}
-							}
-						});
-						*/
-					}
-				});
-			}
-		});
-	}
-});

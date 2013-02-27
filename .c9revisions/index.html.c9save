@@ -53,3 +53,4 @@
 {"ts":1361518198288,"patch":[[{"diffs":[[0," src = \""],[-1,"/"],[0,"socket.i"]],"start1":131,"start2":131,"length1":17,"length2":16}]],"length":663,"saved":false}
 {"ts":1361518259367,"patch":[[{"diffs":[[0," src = \""],[1,"/"],[0,"socket.i"]],"start1":131,"start2":131,"length1":16,"length2":17}]],"length":664,"saved":false}
 {"ts":1361520510841,"patch":[[{"diffs":[[0,"    "],[-1,"alert(data);"],[0,"\r\n  "]],"start1":302,"start2":302,"length1":20,"length2":8}]],"length":652,"saved":false}
+{"contributors":[],"silentsave":false,"ts":1361535338626,"patch":[[{"diffs":[[0,"  \r\n"],[-1,"   \r\n   $('#b3').click(function () {\r\n    socket.emit('message', { message: 3 });\r\n   });\r\n   \r\n   \r\n"],[0,"  })"]],"start1":417,"start2":417,"length1":109,"length2":8},{"diffs":[[0,"/>\r\n"],[-1,"   <button id=\"b3\">3</button>\r\n"],[0,"</di"]],"start1":487,"start2":487,"length1":39,"length2":8}]],"length":520,"saved":false}
