@@ -7,7 +7,7 @@ var request = require('request')
     , socketio = require('socket.io')
     , express = require('express');
 
-if (cluster.isMaster) {
+ if (cluster.isMaster) {
     // Fork workers.
     for (var i = 0; i < numCPUs; i++) {
         cluster.fork();
@@ -17,30 +17,29 @@ if (cluster.isMaster) {
         console.log('worker ' + worker.pid + ' died');
     });
 } else {
-    console.log("worker: %s", process.env.NODE_WORKER_ID);
- 
     var app = express();
     var server = require('http').createServer(app);
     var io = socketio.listen(server);
     
     app.get('/', function(req, res){
-        console.log("WORKED!! %s", process.env.NODE_WORKER_ID);
-        res.sendfile(__dirname+'/index.html');
+        //console.log("WORKED!! %s", process.env.NODE_WORKER_ID);
+        res.sendfile('index.html');
     });
  
    
     console.log('Server Running~!');
-
         
     function thread1() { 
         var result  = Array();
-            
+    	var result_twi  = Array();
+     
         var parser = JSONStream.parse(['results', true])
                      .on('error', function(err) { console.log(err); })
-          , req = request({url: 'http://search.twitter.com/search.json?geocode=37.335887,126.584063,125km'})
+          , req = request({url: 'http://search.twitter.com/search.json?geocode=37.335887,126.584063,125000km'})
           , logger = es.mapSync(function (data) {
                 //console.log(data.iso_language_code);
                 result.push(data.iso_language_code);
+        result_twi.push(data.text);
              
         }).on('error', function(err) { console.log(err); });
         
@@ -62,16 +61,17 @@ if (cluster.isMaster) {
         ],
         
         function(err, results) {
-            console.log('twitter count : '+result.length);
+            //console.log('twitter count : '+result.length);
             //io.sockets.on('connection', function (socket) {
-             //   console.log("return : " + result.length);
-              io.sockets.emit('message', 1); 
+             // console.log("return : " + result.length);
+             io.sockets.emit('message', result); 
+             io.sockets.emit('message_twi', result_twi); 
            // });
         });
     }
-    
-    var tid = setInterval( thread1,  10000);
-    
-    server.listen(process.env.PORT);
-}
 
+    var tid = setInterval( thread1,  1000);
+    
+    server.listen(8080);
+
+}
